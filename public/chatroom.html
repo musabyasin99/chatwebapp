@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Room</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/chatroom.css" />
+  </head>
+  <body>
+    <header style="padding: 20px">
+      <div class="logo" style="background: none">Chatbot</div>
+      <button class="logOff">Leave Room</button>
+    </header>
+    <main>
+      <header style="justify-content: center; border-radius: 12px">
+        <h2>Messages</h2>
+        <button class="toggle"></button>
+      </header>
+      <nav class="sidebarWrapper">
+        <h4>Chat Rooms</h4>
+        <ul class="sidebar">
+          <li class="navItem">
+            <span class="icon"><i class="bx bxs-home-alt-2"></i></span>
+            <span class="text">Item 1</span>
+          </li>
+        </ul>
+      </nav>
+      <div class="msgWrap">
+        <h3 class="sectionHead">Room Name</h3>
+        <ul class="msgList">
+          <li class="msg">
+            <div class="msgDetails">
+              <span class="senderName">Test User 1</span>
+              <span class="time">12/12/12,16:00</span>
+            </div>
+            <span class="msgBody"
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa
+              laudantium neque id.</span
+            >
+          </li>
+          <li class="msg">
+            <div class="msgDetails">
+              <span class="senderName">Test User 1</span>
+              <span class="time">12/12/12 , 16:00</span>
+            </div>
+            <span class="msgBody"
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa
+              laudantium neque id.</span
+            >
+          </li>
+          <li class="msg sender">
+            <div class="msgDetails">
+              <span class="senderName">Test User 1</span>
+              <span class="time">12/12/12 , 16:00</span>
+            </div>
+            <span class="msgBody"
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa
+              laudantium neque id.</span
+            >
+          </li>
+          <li class="msg">
+            <div class="msgDetails">
+              <span class="senderName">Test User 1</span>
+              <span class="time">12/12/12 , 16:00</span>
+            </div>
+            <span class="msgBody"
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa
+              laudantium neque id.</span
+            >
+          </li>
+          <li class="msg sender">
+            <div class="msgDetails">
+              <span class="senderName">Test User 1</span>
+              <span class="time">12/12/12 , 16:00</span>
+            </div>
+            <span class="msgBody"
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa
+              laudantium neque id.</span
+            >
+          </li>
+        </ul>
+        <form action="">
+          <textarea name="msg" id="usermsg" cols="30" rows="1"></textarea>
+          <button><i class="bx bx-send"></i></button>
+        </form>
+      </div>
+    </main>
+    <footer>Copyright</footer>
+    <script src="./js/chatroom.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

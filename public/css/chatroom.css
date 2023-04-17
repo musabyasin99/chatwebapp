@@ -1,0 +1,264 @@
+.logOff {
+  width: 100px;
+  padding: 6px;
+  border-color: transparent;
+  border-radius: 36px 24px 36px 24px;
+  background: aliceblue;
+  font-size: 0.65rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.logOff:is(:hover, :focus) {
+  background: rgb(241, 1, 1);
+  box-shadow: 0 5px 10px 3px rgba(112, 2, 2);
+  color: white;
+}
+
+main {
+  position: relative;
+  background: rgb(41, 119, 197);
+  margin: 5px auto;
+  border-radius: 12px;
+  max-width: 100%;
+  min-width: 300px;
+}
+.toggle {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  background: rgba(39, 108, 177, 0.5);
+  transition: all 0.4s ease-out;
+}
+nav {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  max-width: 400px;
+  width: 50vw;
+  min-width: 300px;
+  height: calc(100% - 55px);
+  margin: 2.5px 1px;
+  padding: 2px;
+  border-radius: 8px;
+  background: rgba(18, 67, 116, 0.5);
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  z-index: 10;
+  transition: 0.3s all ease-out;
+}
+nav h4 {
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 5px;
+  background: rgb(15, 74, 134);
+  border-radius: 6px;
+  transition: all 0.5s 0.3s;
+}
+.sidebar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: 0.3s all ease;
+}
+.sidebar .navItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  width: 95%;
+  height: 50px;
+  padding-top: 5px;
+  padding-left: 10px;
+  border-radius: 12px;
+  background: dodgerblue;
+  color: aliceblue;
+  transition: 0.3s all ease-out;
+  cursor: pointer;
+}
+.sidebar .navItem:hover {
+  background: rgb(22, 105, 187);
+}
+nav .sidebar .navItem .text {
+  transition: all 0.5s 0.3s;
+}
+.icon {
+  font-size: 2rem;
+  color: white;
+}
+.msgWrap {
+  position: absolute;
+  top: 50px;
+  right: 2.5px;
+  width: calc(100% - 410px);
+  height: calc(100% - 55px);
+  background: dodgerblue;
+  margin: 2.5px 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.msgList {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: calc(100% - 110px);
+  padding: 20px;
+  border-radius: 12px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.msg {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: 80%;
+  width: 80%;
+  min-width: 95%;
+  text-align: end;
+  background: rgb(25, 121, 218);
+  border-radius: 36px 36px 36px 0;
+  padding: 8px;
+  background-blend-mode: difference;
+  font-family: monospace, sans-serif, serif, helvetica;
+  font-weight: 300;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+.sender {
+  align-self: flex-end;
+  background: rgb(6, 73, 139);
+  border-radius: 36px 36px 0 36px;
+}
+.msgDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid white;
+  padding: 5px;
+  margin: 5px;
+  font-size: 0.5rem;
+}
+.time {
+  font-size: 0.5rem;
+}
+form {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  background: #00000062;
+  backdrop-filter: blur(15px);
+}
+textarea {
+  width: 70%;
+  max-height: 50px;
+  padding: 10px 5px;
+  outline: none;
+  border-color: transparent;
+  background: inherit;
+  border-radius: 4px;
+  border-bottom: 1px solid white;
+  color: white;
+  transition: all 0.3s ease;
+}
+textarea:is(:hover, :focus) {
+  background: #000000dc;
+}
+form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: inherit;
+  border-radius: 50%;
+  transform: rotate(-15deg);
+  font-weight: 200;
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #000000dc;
+}
+@media screen and (max-width: 788px) {
+  .toggle {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    position: absolute;
+    top: 0;
+    left: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 45px;
+    margin: 2.5px 0;
+    border-radius: 12px;
+  }
+  .toggle.active,
+  .toggle:hover {
+    background: rgb(22, 105, 187);
+  }
+  .toggle::before,
+  .toggle::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 6px;
+    background: white;
+    transition: all 0.4s ease-out;
+  }
+  .toggle::before {
+    transform: translateY(-10px) rotate(0);
+  }
+  .toggle.active::before {
+    transform: translateY(-8px) rotate(35deg);
+  }
+  .toggle::after {
+    transform: translateY(10px) rotate(0);
+    box-shadow: 0 -10px 0 0 dodgerblue;
+  }
+  .toggle.active::after {
+    transform: translateY(8px) rotate(-35deg);
+    box-shadow: 0 0 0 0 transparent;
+  }
+  nav {
+    width: 60px;
+    min-width: auto;
+    z-index: 10;
+  }
+  nav .sidebar .navItem .text {
+    opacity: 0;
+  }
+  nav.active .sidebar .navItem .text {
+    opacity: 1;
+  }
+  nav.active {
+    width: 50vw;
+  }
+  .msgWrap {
+    width: calc(100% - 65px);
+  }
+}

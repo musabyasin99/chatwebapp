@@ -1,0 +1,53 @@
+main {
+  padding: 20vh auto;
+}
+form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.formGroup {
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+label {
+  color: aliceblue;
+  font-weight: 200;
+}
+input,
+select {
+  display: block;
+  background: aliceblue;
+  margin: 10px 0;
+  border-color: transparent;
+  border-radius: 6px;
+  padding: 10px 20px;
+  outline: none;
+  max-width: 400px;
+  width: 100%;
+  min-width: 200px;
+  text-align: center;
+}
+input[type="submit"] {
+  max-width: 150px;
+  width: 30%;
+  min-width: 100px;
+  padding: 10px 40px;
+  border-color: transparent;
+  border-radius: 6px;
+  background: aliceblue;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+input[type="submit"]:is(:hover, :focus) {
+  background: aqua;
+}
